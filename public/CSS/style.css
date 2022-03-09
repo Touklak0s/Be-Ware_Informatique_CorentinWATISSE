@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+.FormContainer {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width:75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+.Container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width:70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+.ProductListContainer{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width:90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3%;
+}
+
+.CenterTexte{
+    text-align: center;
+    text-decoration: none;
+}
+
+.Red, .Red:hover{
+    color:red;
+    text-decoration: none;
+    display: inline;
+}
+
+.Green, .Green:hover{
+    color: green;
+    display: inline;
+}
+
+.Gray, .Gray:hover{
+    color: gray;
+}
+
+.DarkRed, .DarkRed:hover{
+    color: darkred;
+}
+
+li {
+    padding: 10px;
+}

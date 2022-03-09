@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}  Produit {% endblock %}
+
+
+{% block body %}
+
+    <div class="FormContainer">
+    {% form_theme NewProductForm 'bootstrap_5_horizontal_layout.html.twig' %}
+
+    {{ form(NewProductForm) }}
+
+    </div>
+{% endblock %}

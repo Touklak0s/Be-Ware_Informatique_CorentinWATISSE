@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Liste des produits {% endblock %}
+
+
+{% block body %}
+
+    <div class="ProductListContainer">
+    <table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prix</th>
+        <th scope="col">Quantité</th>
+        <th scope="col" class="CenterTexte"> + 1 </th>
+        <th scope="col" class="CenterTexte"> - 1 </th>
+        <th scope="col">Date de création</th>
+        <th scope="col" class="CenterTexte">PDF</th>
+        <th scope="col" class="CenterTexte"">Modifier ...</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for Product in ProductList %}
+        {% if Product.QuantiteProduit != 0  %}
+    <tr>
+        <td> {{ Product.NomProduit }} </td>
+        <td> {{ Product.PrixProduit }} </td>
+        <td> {{ Product.QuantiteProduit }} </td>
+        <td class="CenterTexte ">
+            <a href="{{ relative_path("/Incrementer/"~Product.id) }}" class="Green">
+                <i class="fa-solid fa-plus"></i>
+            </a>
+        </td>
+        <td class="CenterTexte">
+            <a href="{{ relative_path("/Decrementer/"~Product.id) }}" class="Red">
+                <i class="fa-solid fa-minus"></i>
+            </a>
+        </td>
+        <td> {{ Product.DateCreationProduit|date("m/d/Y") }} </td>
+        <td class="CenterTexte">
+            <a href="{{ relative_path("/pdf/"~Product.id ) }}" class="DarkRed">
+                <i class="fa-solid fa-file-pdf"> </i>
+            </a>
+        </td>
+        <td class="CenterTexte">
+        <a href="{{ relative_path("/modifier/"~Product.id) }}" class="Gray">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+        </td>
+    </tr>
+
+        {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+{% endblock %}

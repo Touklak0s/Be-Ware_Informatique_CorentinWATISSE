@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block body %}
+
+<h3 class="CenterTexte" style="padding-top: 5%;"> Mini-projet : Module de matériel </h3>
+
+    <div class="Container">
+
+        <ul>
+            <li>
+                Table requise avec génération par doctrine : Matériel avec pour attributs le nom du matériel, le prix, la quantité et la date
+                de création. <div class="Green"> <i class="fa-solid fa-check" ></i> </div>
+            </li>
+            <li>
+                Réaliser un affichage de la liste du matériel en utilisant le plug-in jQuery datatable (config en serverSide : true de
+                préférence). <div class="Red"> <i class="fa-solid fa-xmark"></i></div>
+                <ul>
+                    <li style="list-style-type:none;">
+                        <i> N'ayant jamais utiliser JQuery, je n'est pas voulu "fausser" le test, j'ai donc fait les tableau en Bootstrap</i>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                En plus de cet affichage, prévoir un bouton « voir » qui affiche une popup avec les infos du produit ainsi qu’un bouton
+                « modifier », qui nous redirige vers un formulaire de modification du matériel. Cela implique l’utilisation des formulaires
+                symfony.
+                Une fois le formulaire validé, nous sommes redirigés vers la liste du matériel. <div class="Green"> <i class="fa-solid fa-check" ></i> </div>
+            </li>
+            <li>
+                Les petits plus, non obligatoires :
+                <ul>
+                    <li>
+                        Avoir un bouton « décrémenter ». Qui décrémente le stock de 1. Arrivé à 0 le produit n'apparait plus dans la
+                        liste (utilisation des repository de préférence) et un mail est envoyé à une adresse configurée pour informer
+                        l'admin. <div class="Green"> <i class="fa-solid fa-check" ></i> </div>
+                    </li>
+                    <li>
+                        Génération du pdf du détail du produit (Librairie FPDF) <div class="Green"> <i class="fa-solid fa-check" ></i> </div>
+                    </li>
+                    <li>
+                        Recherche sur le nom du produit dans la liste
+                    </li>
+                </ul>
+            </li>
+            <li style="list-style-type:none;">
+                Les efforts sur l’ergonomie et l’intégration seront pris en compte.
+            </li>
+        </ul>
+
+    </div>
+
+{% endblock %}
