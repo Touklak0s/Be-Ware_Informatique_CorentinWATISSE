@@ -31,7 +31,7 @@ class IncreDecreController extends AbstractController
     }
 
     /**
-     * @Route ("/Decrementer/{id}", name="IncrementQuantité")
+     * @Route ("/Decrementer/{id}", name="DecrementQuantité")
      * @param int $id
      *
      */
